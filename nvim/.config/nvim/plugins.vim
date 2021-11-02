@@ -5,8 +5,8 @@ call plug#begin()
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'preservim/tagbar'
+"Plug 'ludovicchabant/vim-gutentags'
+"Plug 'preservim/tagbar'
 
 Plug 'scrooloose/nerdtree'
 
