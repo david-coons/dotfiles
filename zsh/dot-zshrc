@@ -8,7 +8,10 @@ export ZSH="/home/dcoons/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+#ZSH_THEME="robbyrussell"
 ZSH_THEME="af-magic"
+#ZSH_THEME="powerlevel10k"
+#ZSH_THEME="simple"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +73,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mix gradle tmux fzf vi-mode)
+plugins=(aws brew common-aliases gradle git fzf httpie kubectl mix vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,14 +102,26 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias v='nvim'
 alias tg='tig --all'
 setopt auto_cd
-cdpath=($HOME/projects)
+setopt share_history
+cdpath=($HOME/projects $HOME/projects/brace-core/backend $HOME/projects/brace-core/frontend/clients $HOME/projects/operations $HOME/projects/research)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(rbenv init - zsh)"
+export JAVA_HOME=`/usr/libexec/java_home -v 15.0`
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
+eval "$(rbenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/dcoons/.sdkman"
-[[ -s "/home/dcoons/.sdkman/bin/sdkman-init.sh" ]] && source "/home/dcoons/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/Users/david/.sdkman"
+[[ -s "/Users/david/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/david/.sdkman/bin/sdkman-init.sh"

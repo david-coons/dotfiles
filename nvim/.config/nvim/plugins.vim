@@ -35,12 +35,17 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-commentary'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-unimpaired'
-Plug 'Lokaltog/vim-easymotion'
 Plug 'moll/vim-bbye'
+Plug 'ggandor/lightspeed.nvim'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'sindrets/diffview.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
 
+" Plug 'Lokaltog/vim-easymotion'
 " Plug 'junegunn/vim-easy-align'
 " Plug 'https://github.com/kshenoy/vim-signature'
 " Plug 'klen/python-mode'
