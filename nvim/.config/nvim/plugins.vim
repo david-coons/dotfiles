@@ -11,25 +11,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 
 Plug 'neovim/nvim-lspconfig'
-
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
-
 Plug 'onsails/lspkind-nvim'
-
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack' }
-
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'artur-shaik/vim-javacomplete2'
-" Plug 'slashmili/alchemist.vim'
-" Plug 'zchee/deoplete-jedi'
+Plug 'dense-analysis/ale'
 
 Plug 'sheerun/vim-polyglot'
-
-" Plug 'dense-analysis/ale'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
