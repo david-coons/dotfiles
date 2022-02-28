@@ -205,4 +205,10 @@ lspconfig.elixirls.setup({
     }
   }
 })
+
+lspconfig.tsserver.setup({
+    capabilities = capabilities,
+    on_attach = on_attach
+})
 EOF
+
