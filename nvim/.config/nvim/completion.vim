@@ -2,6 +2,8 @@ set completeopt=menu,menuone,noselect
 
 lua << EOF
 
+require("nvim-lsp-installer").setup({})
+
 local lspconfig = require("lspconfig")
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -92,11 +94,13 @@ end
 
 -- Finally, let's initialize the Elixir language server
 
+
 -- Replace the following with the path to your installation
-local path_to_elixirls = vim.fn.expand("~/language-servers/elixir-ls/release/language_server.sh")
+--local path_to_elixirls = vim.fn.expand("~/language-servers/elixir-ls/release/language_server.sh")
+--local path_to_elixirls = vim.fn.expand("~/.local/share/nvim/lsp_servers/elixir/elixir-ls/language_server.sh")
 
 lspconfig.elixirls.setup({
-  cmd = {path_to_elixirls},
+--  cmd = {path_to_elixirls},
   capabilities = capabilities,
   on_attach = on_attach,
   settings = {
@@ -132,6 +136,11 @@ lspconfig.solargraph.setup({
             diagnostics = true
         }
     }
+})
+
+lspconfig.jsonls.setup({
+    capabilities = capabilities,
+    on_attach = on_attach
 })
 EOF
 

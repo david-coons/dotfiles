@@ -7,6 +7,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'scrooloose/nerdtree'
 
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -43,6 +44,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
 
 Plug 'mechatroner/rainbow_csv'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 " Plug 'ludovicchabant/vim-gutentags'
 " Plug 'preservim/tagbar'
@@ -82,7 +85,15 @@ set laststatus=2
 
 let g:Gitv_OpenHorizontal = 1
 
-let g:vimwiki_list = [{'path': '~/notes/vimwiki/', 'syntax': 'markdown', 'ext': '.md', 'path_html': '~/notes/vimwiki_html'}]
+let g:vimwiki_list = [{
+            \ 'path': '~/notes/vimwiki/',
+            \ 'syntax': 'markdown',
+            \ 'ext': '.md',
+            \ 'path_html': '~/notes/vimwiki_html',
+            \ 'custom_wiki2html': 'vimwiki_markdown',
+            \ 'template_default': 'default',
+            \ 'template_ext': '.tpl'}]
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+let g:vimwiki_global_ext = 0
 
 call plug#end()
