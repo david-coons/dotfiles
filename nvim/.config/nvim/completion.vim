@@ -89,7 +89,7 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>F', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
   -- tell nvim-cmp about our desired capabilities
-  require("cmp_nvim_lsp").update_capabilities(capabilities)
+  require("cmp_nvim_lsp").default_capabilities()
 end
 
 -- Finally, let's initialize the Elixir language server
