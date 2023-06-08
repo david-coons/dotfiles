@@ -27,7 +27,7 @@ set hidden
 set display=uhex
 set visualbell
 set noerrorbells
-set printoptions=paper:letter,right:1in,left:54pt,wrap:y,duplex:long
+" set printoptions=paper:letter,right:1in,left:54pt,wrap:y,duplex:long
 " set dir=~/.vim/swap//
 
 set gdefault
